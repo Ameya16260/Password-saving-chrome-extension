@@ -8,15 +8,28 @@
 </head>
 <body>
     <div class="main">
+        <form action="">
 
-        <div class="urlCont">
-            <input type="text" name="url" id="url">
-            <button id="takeCurrent">Take current URL</button>
-        </div>
-        <input type="text" name="name" id="name">
-        <input type="password" name="pass" id="pass">
-        <button>Save Password</button>
-        <script src="popup.js"></script>
+            <div class="Cont">
+                <label for="url">Url</label>
+                <input type="text" name="url" id="url" required>
+                <button id="takeCurrent">Take current Url</button>
+            </div>
+            <div class="Cont">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="Cont">
+                <label for="pass">Password</label>
+                <input type="password" id="pass">
+            </div>
+            <div class="Cont">
+                <label for="desc">Description</label>
+                <textarea id="desc" rows="4"></textarea>
+            </div>
+            <button type="submit" class="save">Save Password</button>
+            <script src="popup.js"></script>
+        </form>
     </div>
     
 </body>
