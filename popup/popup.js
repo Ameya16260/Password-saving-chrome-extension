@@ -11,7 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = document.getElementById("name").value;
         const password = document.getElementById("pass").value;
         const description = document.getElementById("desc").value;
-
+        fetch("http://127.0.0.1:5000/savePass",{
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({"name":name, "password":password, "url":url, "desc":description})
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Success:", data);
+            window.close();
+        })
+        .catch(error => console.error("Error:", error));
         // Log the values to the console
         console.log("URL:", url);
         console.log("Name:", name);
